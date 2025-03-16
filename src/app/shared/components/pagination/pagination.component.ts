@@ -14,7 +14,7 @@ export class PaginationComponent {
   pages = input<number>(0);
   currentPage = input<number>(1);
 
-  activatePage = linkedSignal(this.currentPage);
+  activatePage = linkedSignal( this.currentPage);
 
   getPageList = computed(()=>{
     return Array.from({ length: this.pages() }, (_, i) => i + 1);
